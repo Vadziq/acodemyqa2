@@ -18,7 +18,7 @@ and could not pass by such interesting toy as _Arduino_, it uses reduced C++ lan
 Playing with its I got some success that finally become to working industrial scaling and packing machine,
 which uses master controller and 12 slave controllers connected with I2C network, so I become a bit more experienced.
 
-**So why I`m trying to get into IT sphere?**
+**So why I am trying to get into IT sphere?**
 
 My job is often related to work in unpleasant places, touching dirty things, walking dirty wear etc.
 I am getting older and would like to work in more comfortable conditions.
