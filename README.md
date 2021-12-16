@@ -10,7 +10,7 @@ So I liked the idea and started to learn basics.
 In few months I was able to program actions of manual trading, so I got instrument to check strategy we learned on courses.
 I downloaded year long history data of tick-by-tick market moving and applied my codes on it. 
 Results was predictable, strategy was not working, just no one right situation to trade using indicators we learned on courses.
-I was disappointed but kept trying to invent my own strategy, but it gave not any stable results and left the idea.
+I was disappointed but kept trying to invent my own strategy, but it gave not any stable results and I left the idea.
 So finally I got some coding experience and nothing more.
 My next meet with coding already related to my job. 
 As an electricity automatics specialist I always close to electronic controllers,
