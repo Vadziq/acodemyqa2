@@ -1,4 +1,4 @@
-# Why I`m trying to become an IT specialist?
+# Why I am trying to become an IT specialist?
 
 
 **A little history**
