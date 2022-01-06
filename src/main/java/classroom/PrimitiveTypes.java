@@ -3,6 +3,7 @@ package classroom;
 import java.util.Arrays;
 
 public class PrimitiveTypes {
+
     public static void main(String[] args) {
 
 //        Floating point example
@@ -11,7 +12,7 @@ public class PrimitiveTypes {
         System.out.println(floatExample);
         System.out.println(999999.99F);
 
-        double doubleExample = 200000.988;
+        double doubleExample = 200000.988D;
         System.out.println(doubleExample);
         System.out.println(200000.988D);
 
@@ -21,6 +22,7 @@ public class PrimitiveTypes {
         System.out.println(handCount);
         System.out.println(Byte.MIN_VALUE);
         System.out.println(Byte.MAX_VALUE);
+
 
         short distanceBetweenKievAndRiga = 1011;
         System.out.println(distanceBetweenKievAndRiga);
@@ -59,4 +61,5 @@ public class PrimitiveTypes {
 
 
     }
+
 }
