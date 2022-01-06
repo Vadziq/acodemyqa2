@@ -79,6 +79,7 @@ public class variableTypes {
 
         System.out.println("Using printf:");
         System.out.printf("%s %s %s %s %s %s.", firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord);
+        System.out.println("");
 
     }
 }
