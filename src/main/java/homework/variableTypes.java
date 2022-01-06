@@ -5,6 +5,7 @@ import java.sql.SQLOutput;
 public class variableTypes {
     public static void main(String[] args) {
 
+
     // 1 Variable examples
         System.out.println("1. Variable examples:");
     //Floats
