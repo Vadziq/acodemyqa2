@@ -1,6 +1,5 @@
 package homework;
 
-import java.sql.SQLOutput;
 
 public class variableTypes {
     public static void main(String[] args) {
@@ -9,13 +8,53 @@ public class variableTypes {
     // 1 Variable examples
         System.out.println("1. Variable examples:");
     //Floats
-        System.out.print("Float: ");
-        float floatOne = 1234567.8F;
-        System.out.println(floatOne);
+        System.out.println("Floats (Density of elements g/L) ");
+        float  hydrogenDensityInGramsOnLiter= 0.0899F;
+        System.out.println("\tHydrogen:\t" + hydrogenDensityInGramsOnLiter);
+        float  heliumDensityInGramsOnLiter= 0.1785F;
+        System.out.println("\tHelium:\t\t" + heliumDensityInGramsOnLiter);
+        float  neonDensityInGramsOnLiter= 0.9F;
+        System.out.println("\tNeon:\t\t" + neonDensityInGramsOnLiter);
+        float  nitrogenDensityInGramsOnLiter= 1.2506F;
+        System.out.println("\tNitrogen:\t" + nitrogenDensityInGramsOnLiter);
+        float  oxygenDensityInGramsOnLiter= 1.429F;
+        System.out.println("\tOxygen:\t\t" + oxygenDensityInGramsOnLiter);
+        float  fluorineDensityInGramsOnLiter= 1.696F;
+        System.out.println("\tFluorine:\t" + fluorineDensityInGramsOnLiter);
+        float  argonDensityInGramsOnLiter= 1.7824F;
+        System.out.println("\tArgon:\t\t" + argonDensityInGramsOnLiter);
+        float  chlorineDensityInGramsOnLiter= 3.214F;
+        System.out.println("\tClorine:\t" + chlorineDensityInGramsOnLiter);
+        float  kryptonDensityInGramsOnLiter= 3.75F;
+        System.out.println("\tKrypton:\t" + kryptonDensityInGramsOnLiter);
+        float  xenonDensityInGramsOnLiter= 5.9F;
+        System.out.println("\tXenon:\t\t" + xenonDensityInGramsOnLiter);
+        System.out.print("\n");
+
     //Doubles
-        System.out.print("Double: ");
-        double doubleOne = 123.987D;
-        System.out.println(doubleOne);
+        System.out.println("Doubles (Currencies against the euro ECB 07/01/2022)");
+        double euroToUSDollar = 1.1298D;
+        System.out.println("\tUSD:\t" + euroToUSDollar);
+        double euroToJapaneseYen = 130.9D;
+        System.out.println("\tJPY:\t" + euroToJapaneseYen);
+        double euroToPoundSterling = 130.9D;
+        System.out.println("\tGPB:\t" + euroToPoundSterling);
+        double euroToRussianRuble = 85.298D;
+        System.out.println("\tRUB:\t" + euroToRussianRuble);
+        double euroToNorwegianKrone = 10.0288D;
+        System.out.println("\tNOK:\t" + euroToNorwegianKrone);
+        double euroToAustralianDollar = 1.5804D;
+        System.out.println("\tAUD:\t" + euroToAustralianDollar);
+        double euroToNewZealandDollar = 1.6748D;
+        System.out.println("\tNZD:\t" + euroToNewZealandDollar);
+        double euroToIndianRupee = 83.9780D;
+        System.out.println("\tINR:\t" + euroToIndianRupee);
+        double euroToMexicanPeso = 23.1109D;
+        System.out.println("\tMXN:\t" + euroToMexicanPeso);
+        double euroToIsraeliShekel = 3.5135D;
+        System.out.println("\tILS:\t" + euroToIsraeliShekel);
+        System.out.print("\n");
+
     //Bytes
         System.out.print("Byte: ");
         byte byteOne = 123;
@@ -24,14 +63,57 @@ public class variableTypes {
         System.out.print("Short: ");
         short shortOne = 12345;
         System.out.println(shortOne);
+
     //Integers
-        System.out.print("Integer: ");
-        int intOne = 1234567890;
-        System.out.println(intOne);
+        System.out.println("Integers (Land areas of countries in square kilometers)");
+        int landAreaOfRussiaInSquareKilometers = 16376870;
+        System.out.println("\tRussia:\t\t" + landAreaOfRussiaInSquareKilometers);
+        int landAreaOfCanadaInSquareKilometers = 9093510;
+        System.out.println("\tCanada:\t\t" + landAreaOfCanadaInSquareKilometers);
+        int landAreaOfChinaInSquareKilometers = 9388211;
+        System.out.println("\tChina:\t\t" + landAreaOfChinaInSquareKilometers);
+        int landAreaOfUSInSquareKilometers = 9147420;
+        System.out.println("\tUS:\t\t\t" + landAreaOfUSInSquareKilometers);
+        int landAreaOfBrazilInSquareKilometers = 8358140;
+        System.out.println("\tBrazil:\t\t" + landAreaOfBrazilInSquareKilometers);
+        int landAreaOfAustraliaInSquareKilometers = 7682300;
+        System.out.println("\tAustralia:\t" + landAreaOfAustraliaInSquareKilometers);
+        int landAreaOfIndiaInSquareKilometers = 2973190;
+        System.out.println("\tIndia:\t\t" + landAreaOfIndiaInSquareKilometers);
+        int landAreaOfArgentinaInSquareKilometers = 2736690;
+        System.out.println("\tArgentina:\t" + landAreaOfArgentinaInSquareKilometers);
+        int landAreaOfKazakhstanInSquareKilometers = 2699700;
+        System.out.println("\tKazakhstan:\t" + landAreaOfKazakhstanInSquareKilometers);
+        int landAreaOfAlgeriaInSquareKilometers = 2381740;
+        System.out.println("\tAlgeria:\t" + landAreaOfAlgeriaInSquareKilometers);
+        System.out.print("\n");
+
     //Longs
-        System.out.print("long: ");
-        long longOne = 123456789012345678L;
-        System.out.println(longOne);
+        System.out.println("longs (World population each year 2010-2020)");
+        long worldPopulationIn2010 = 6956824000L;
+        System.out.println("\t2010:\t" + worldPopulationIn2010);
+        long worldPopulationIn2011 = 7041194000L;
+        System.out.println("\t2011:\t" + worldPopulationIn2011);
+        long worldPopulationIn2012 = 7125828000L;
+        System.out.println("\t2012:\t" + worldPopulationIn2012);
+        long worldPopulationIn2013 = 7210582000L;
+        System.out.println("\t2013:\t" + worldPopulationIn2013);
+        long worldPopulationIn2014 = 7295291000L;
+        System.out.println("\t2014:\t" + worldPopulationIn2014);
+        long worldPopulationIn2015 = 7379797000L;
+        System.out.println("\t2015:\t" + worldPopulationIn2015);
+        long worldPopulationIn2016 = 7464022000L;
+        System.out.println("\t2016:\t" + worldPopulationIn2016);
+        long worldPopulationIn2017 = 7547859000L;
+        System.out.println("\t2017:\t" + worldPopulationIn2017);
+        long worldPopulationIn2018 = 7631091000L;
+        System.out.println("\t2018:\t" + worldPopulationIn2018);
+        long worldPopulationIn2019 = 7713468000L;
+        System.out.println("\t2019:\t" + worldPopulationIn2019);
+        long worldPopulationIn2020 = 7795000000L;
+        System.out.println("\t2020:\t" + worldPopulationIn2020);
+        System.out.print("\n");
+
     //Chars
         System.out.print("Char: ");
         char charOne = '\u0070';
