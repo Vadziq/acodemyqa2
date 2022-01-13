@@ -4,34 +4,33 @@ package homework;
 public class variableTypes {
     public static void main(String[] args) {
 
-
-    // 1 Variable examples
+        // 1 Variable examples
         System.out.println("1. Variable examples:");
-    //Floats
+        //Floats
         System.out.println("Floats (Density of elements g/L) ");
-        float  hydrogenDensityInGramsOnLiter= 0.0899F;
+        float hydrogenDensityInGramsOnLiter = 0.0899F;
         System.out.println("\tHydrogen:\t" + hydrogenDensityInGramsOnLiter);
-        float  heliumDensityInGramsOnLiter= 0.1785F;
+        float heliumDensityInGramsOnLiter = 0.1785F;
         System.out.println("\tHelium:\t\t" + heliumDensityInGramsOnLiter);
-        float  neonDensityInGramsOnLiter= 0.9F;
+        float neonDensityInGramsOnLiter = 0.9F;
         System.out.println("\tNeon:\t\t" + neonDensityInGramsOnLiter);
-        float  nitrogenDensityInGramsOnLiter= 1.2506F;
+        float nitrogenDensityInGramsOnLiter = 1.2506F;
         System.out.println("\tNitrogen:\t" + nitrogenDensityInGramsOnLiter);
-        float  oxygenDensityInGramsOnLiter= 1.429F;
+        float oxygenDensityInGramsOnLiter = 1.429F;
         System.out.println("\tOxygen:\t\t" + oxygenDensityInGramsOnLiter);
-        float  fluorineDensityInGramsOnLiter= 1.696F;
+        float fluorineDensityInGramsOnLiter = 1.696F;
         System.out.println("\tFluorine:\t" + fluorineDensityInGramsOnLiter);
-        float  argonDensityInGramsOnLiter= 1.7824F;
+        float argonDensityInGramsOnLiter = 1.7824F;
         System.out.println("\tArgon:\t\t" + argonDensityInGramsOnLiter);
-        float  chlorineDensityInGramsOnLiter= 3.214F;
-        System.out.println("\tClorine:\t" + chlorineDensityInGramsOnLiter);
-        float  kryptonDensityInGramsOnLiter= 3.75F;
+        float chlorineDensityInGramsOnLiter = 3.214F;
+        System.out.println("\tChlorine:\t" + chlorineDensityInGramsOnLiter);
+        float kryptonDensityInGramsOnLiter = 3.75F;
         System.out.println("\tKrypton:\t" + kryptonDensityInGramsOnLiter);
-        float  xenonDensityInGramsOnLiter= 5.9F;
+        float xenonDensityInGramsOnLiter = 5.9F;
         System.out.println("\tXenon:\t\t" + xenonDensityInGramsOnLiter);
         System.out.print("\n");
 
-    //Doubles
+        //Doubles
         System.out.println("Doubles (Currencies against the euro ECB 07/01/2022)");
         double euroToUSDollar = 1.1298D;
         System.out.println("\tUSD:\t" + euroToUSDollar);
@@ -55,16 +54,18 @@ public class variableTypes {
         System.out.println("\tILS:\t" + euroToIsraeliShekel);
         System.out.print("\n");
 
-    //Bytes
+        //Bytes
         System.out.print("Byte: ");
         byte byteOne = 123;
         System.out.println(byteOne);
-    //Shorts
+        System.out.print("\n");
+        //Shorts
         System.out.print("Short: ");
         short shortOne = 12345;
         System.out.println(shortOne);
+        System.out.print("\n");
 
-    //Integers
+        //Integers
         System.out.println("Integers (Land areas of countries in square kilometers)");
         int landAreaOfRussiaInSquareKilometers = 16376870;
         System.out.println("\tRussia:\t\t" + landAreaOfRussiaInSquareKilometers);
@@ -88,7 +89,7 @@ public class variableTypes {
         System.out.println("\tAlgeria:\t" + landAreaOfAlgeriaInSquareKilometers);
         System.out.print("\n");
 
-    //Longs
+        //Longs
         System.out.println("longs (World population each year 2010-2020)");
         long worldPopulationIn2010 = 6956824000L;
         System.out.println("\t2010:\t" + worldPopulationIn2010);
@@ -114,14 +115,55 @@ public class variableTypes {
         System.out.println("\t2020:\t" + worldPopulationIn2020);
         System.out.print("\n");
 
-    //Chars
-        System.out.print("Char: ");
-        char charOne = '\u0070';
-        System.out.println(charOne);
+        //Chars
+        System.out.println("Chars: ");
+        char firstCharInAlphabet = '\u0061';
+        System.out.println("\tFirst char in alphabet:\t\t" + firstCharInAlphabet);
+        char secondCharInAlphabet = '\u0062';
+        System.out.println("\tSecond char in alphabet:\t" + secondCharInAlphabet);
+        char thirdCharInAlphabet = '\u0063';
+        System.out.println("\tThird char in alphabet:\t\t" + thirdCharInAlphabet);
+        char fourthCharInAlphabet = '\u0064';
+        System.out.println("\tFourth char in alphabet:\t" + fourthCharInAlphabet);
+        char fifthCharInAlphabet = '\u0065';
+        System.out.println("\tFifth char in alphabet:\t\t" + fifthCharInAlphabet);
+        char numberOneSymbol = '\u0031';
+        System.out.println("\tNumber one symbol:\t\t\t" + numberOneSymbol);
+        char numberTwoSymbol = '\u0032';
+        System.out.println("\tNumber two symbol:\t\t\t" + numberTwoSymbol);
+        char numberThreeSymbol = '\u0033';
+        System.out.println("\tNumber three symbol:\t\t" + numberThreeSymbol);
+        char equalsSymbol = '\u003d';
+        System.out.println("\tEquals symbol:\t\t\t\t" + equalsSymbol);
+        char questionSymbol = '\u003f';
+        System.out.println("\tQuestion symbol:\t\t\t" + questionSymbol);
+        System.out.print("\n");
 
-        System.out.println("");
+        //Booleans
+        System.out.println("Booleans: ");
+        boolean isSunBlack = false;
+        System.out.println("\tIs sun black?\t\t" + isSunBlack);
+        boolean isIceSlippery = true;
+        System.out.println("\tIs ice slippery?\t" + isIceSlippery);
+        boolean isEarthFlat = false;
+        System.out.println("\tIs earth flat?\t\t" + isEarthFlat);
+        boolean isWaterWet = true;
+        System.out.println("\tIs water wet?\t\t" + isWaterWet);
+        boolean isFireHot = true;
+        System.out.println("\tIs fire hot?\t\t" + isFireHot);
+        boolean isGrassGreen = true;
+        System.out.println("\tIs grass green?\t\t" + isGrassGreen);
+        boolean isBatmanReal = false;
+        System.out.println("\tIs Batman real?\t\t" + isBatmanReal);
+        boolean isLifeForever = false;
+        System.out.println("\tIs life forever?\t" + isLifeForever);
+        boolean isFluffLight = true;
+        System.out.println("\tIs fluff light?\t\t" + isFluffLight);
+        boolean isSugarSweet = true;
+        System.out.println("\tIs sugar sweet?\t\t" + isSugarSweet);
+        System.out.print("\n");
 
-    // 2 Variables MIN/MAX
+        // 2 Variables MIN/MAX
         System.out.println("2. Variables MIN/MAX:");
         System.out.printf("float\nMIN: %s MAX: %s.\n", Float.MIN_VALUE, Float.MAX_VALUE);
         System.out.printf("double\nMIN: %s MAX: %s.\n", Double.MIN_VALUE, Double.MAX_VALUE);
@@ -130,25 +172,38 @@ public class variableTypes {
         System.out.printf("integer\nMIN: %s MAX: %s.\n", Integer.MIN_VALUE, Integer.MAX_VALUE);
         System.out.printf("long\nMIN: %s MAX: %s.\n", Long.MIN_VALUE, Long.MAX_VALUE);
 //        System.out.printf("char\nMIN: %s MAX: %s.\n", Character.MIN_VALUE, Character.MAX_VALUE);
-        System.out.println("");
+        System.out.print("\n");
 
-    // 3 Arithmetics
+        // 3 Arithmetics
         System.out.println("3. Arithmetics:");
+
+        System.out.println("\tDoubles:");
         double a = 30.0D;
         double b = 100.0D;
-        System.out.println("");
-        double additionResult = a + b;
-        System.out.println(a + " + " + b + " = " + additionResult);
-        double subtractionResult = a - b;
-        System.out.println(a + " - " + b + " = " + subtractionResult);
-        double multiplicationResult = a * b;
-        System.out.println(a + " * " + b + " = " + multiplicationResult);
-        double divisionResult = a / b;
-        System.out.println(a + " / " + b + " = " + divisionResult);
-        System.out.println("");
+        double additionResultDouble = a + b;
+        System.out.println(a + " + " + b + " = " + additionResultDouble);
+        double subtractionResultDouble = a - b;
+        System.out.println(a + " - " + b + " = " + subtractionResultDouble);
+        double multiplicationResultDouble = a * b;
+        System.out.println(a + " * " + b + " = " + multiplicationResultDouble);
+        double divisionResultDouble = a / b;
+        System.out.println(a + " / " + b + " = " + divisionResultDouble);
 
-    // 4 and 5 Strings
-        System.out.println("4. Strings");
+        System.out.println("\tFloats:");
+        float x = 458.5F;
+        float y = 214.3F;
+        float additionResultFloat = x + y;
+        System.out.println(x + " + " + y + " = " + additionResultFloat);
+        float subtractionResultFloat = x - y;
+        System.out.println(x + " - " + y + " = " + subtractionResultFloat);
+        float multiplicationResultFloat = x * y;
+        System.out.println(x + " * " + y + " = " + multiplicationResultFloat);
+        float divisionResultFloat = x / y;
+        System.out.println(x + " / " + y + " = " + divisionResultFloat);
+        System.out.print("\n");
+
+        // 4 and 5 Strings
+        System.out.println("4. and 5. Strings");
         String firstWord = "All";
         String secondWord = "that";
         String thirdWord = "glitters";
@@ -161,7 +216,7 @@ public class variableTypes {
 
         System.out.println("Using printf:");
         System.out.printf("%s %s %s %s %s %s.", firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord);
-        System.out.println("");
+        System.out.print("\n");
 
     }
 }
