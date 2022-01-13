@@ -4,7 +4,7 @@ package homework;
 public class variableTypes {
     public static void main(String[] args) {
 
-        // 1 Variable examples
+        // 1 Variables examples
         System.out.println("1. Variable examples:");
         //Floats
         System.out.println("Floats (Density of elements g/L) ");
@@ -55,14 +55,53 @@ public class variableTypes {
         System.out.print("\n");
 
         //Bytes
-        System.out.print("Byte: ");
-        byte byteOne = 123;
-        System.out.println(byteOne);
+        System.out.println("Bytes (Ages of actors. January 2022)");
+        byte ageOfArnoldSwarzenegger = 74;
+        System.out.println("\tArnold Shwarzenegger:\t" + ageOfArnoldSwarzenegger);
+        byte ageOfSylvesterStallone = 75;
+        System.out.println("\tSylvester Stallone:\t\t" + ageOfSylvesterStallone);
+        byte ageOfKeanuReeves = 57;
+        System.out.println("\tKeanu Reeves:\t\t\t" + ageOfKeanuReeves);
+        byte ageOfCharlizeTheron = 46;
+        System.out.println("\tCharlize Theron:\t\t" + ageOfCharlizeTheron);
+        byte ageOfMelGibson = 66;
+        System.out.println("\tMel Gibson:\t\t\t\t" + ageOfMelGibson);
+        byte ageOfJohnnyDepp = 58;
+        System.out.println("\tJohnny Depp:\t\t\t" + ageOfJohnnyDepp);
+        byte ageOfGeodrgeClooney = 60;
+        System.out.println("\tGeorge Clooney:\t\t\t" + ageOfGeodrgeClooney);
+        byte ageOfLeonardoDiCaprio = 47;
+        System.out.println("\tLeonardo DiCaprio:\t\t" + ageOfLeonardoDiCaprio);
+        byte ageOfAngelinaJolie = 46;
+        System.out.println("\tAngelina Jolie:\t\t\t" + ageOfAngelinaJolie);
+        byte ageOfBradPitt = 58;
+        System.out.println("\tBrad Pitt:\t\t\t\t" + ageOfBradPitt);
         System.out.print("\n");
+
         //Shorts
-        System.out.print("Short: ");
-        short shortOne = 12345;
-        System.out.println(shortOne);
+        System.out.println("Shorts (Heights of volcanoes in meters)");
+        short heightOfOjosDelSalado = 6879;
+        System.out.println("\tOjos del Salado:\t\t" + heightOfOjosDelSalado);
+        short heightOfLlullaillaco = 6739;
+        System.out.println("\tLlullaillaco:\t\t\t" + heightOfLlullaillaco);
+        short heightOfTipas = 6739;
+        System.out.println("\tTipas:\t\t\t\t\t" + heightOfTipas);
+        short heightOfNevadoDeIncahuasi = 6638;
+        System.out.println("\tNevado de Incahuasi:\t" + heightOfNevadoDeIncahuasi);
+        short heightOfCoropuna = 6337;
+        System.out.println("\tCoropuna:\t\t\t\t" + heightOfCoropuna);
+        short heightOfElCondor = 6373;
+        System.out.println("\tEl Condor:\t\t\t\t" + heightOfElCondor);
+        short heightOfParinacota = 6336;
+        System.out.println("\tParinacota:\t\t\t\t" + heightOfParinacota);
+        short heightOfChimborazo = 6261;
+        System.out.println("\tChimborazo:\t\t\t\t" + heightOfChimborazo);
+        short heightOfPular = 6233;
+        System.out.println("\tPular:\t\t\t\t\t" + heightOfPular);
+        short heightOfElSolo = 6205;
+        System.out.println("\tEl Solo:\t\t\t\t" + heightOfElSolo);
+        short heightOfSierraNevada = 6173;
+        System.out.println("\tSierra Nevada:\t\t\t" + heightOfSierraNevada);
         System.out.print("\n");
 
         //Integers
@@ -165,12 +204,12 @@ public class variableTypes {
 
         // 2 Variables MIN/MAX
         System.out.println("2. Variables MIN/MAX:");
-        System.out.printf("float\nMIN: %s MAX: %s.\n", Float.MIN_VALUE, Float.MAX_VALUE);
-        System.out.printf("double\nMIN: %s MAX: %s.\n", Double.MIN_VALUE, Double.MAX_VALUE);
-        System.out.printf("byte\nMIN: %s MAX: %s.\n", Byte.MIN_VALUE, Byte.MAX_VALUE);
-        System.out.printf("short\nMIN: %s MAX: %s.\n", Short.MIN_VALUE, Short.MAX_VALUE);
-        System.out.printf("integer\nMIN: %s MAX: %s.\n", Integer.MIN_VALUE, Integer.MAX_VALUE);
-        System.out.printf("long\nMIN: %s MAX: %s.\n", Long.MIN_VALUE, Long.MAX_VALUE);
+        System.out.printf("float\n\tMIN: %s \n\tMAX: %s.\n", Float.MIN_VALUE, Float.MAX_VALUE);
+        System.out.printf("double\n\tMIN: %s \n\tMAX: %s.\n", Double.MIN_VALUE, Double.MAX_VALUE);
+        System.out.printf("byte\n\tMIN: %s \n\tMAX: %s.\n", Byte.MIN_VALUE, Byte.MAX_VALUE);
+        System.out.printf("short\n\tMIN: %s \n\tMAX: %s.\n", Short.MIN_VALUE, Short.MAX_VALUE);
+        System.out.printf("integer\n\tMIN: %s \n\tMAX: %s.\n", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        System.out.printf("long\n\tMIN: %s \n\tMAX: %s.\n", Long.MIN_VALUE, Long.MAX_VALUE);
 //        System.out.printf("char\nMIN: %s MAX: %s.\n", Character.MIN_VALUE, Character.MAX_VALUE);
         System.out.print("\n");
 
