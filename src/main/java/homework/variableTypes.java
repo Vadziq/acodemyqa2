@@ -6,6 +6,7 @@ public class variableTypes {
 
         // 1 Variables examples
         System.out.println("1. Variable examples:");
+
         //Floats
         System.out.println("Floats (Density of elements g/L) ");
         float hydrogenDensityInGramsOnLiter = 0.0899F;
