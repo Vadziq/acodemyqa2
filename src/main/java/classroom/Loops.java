@@ -63,7 +63,7 @@ public class Loops {
         }
 
         for (int numberOfArray : numbersArray){
-            System.out.println(numberOfArray);
+            System.out.println("Number of array:\t" + numberOfArray);
         }
 
         // while
