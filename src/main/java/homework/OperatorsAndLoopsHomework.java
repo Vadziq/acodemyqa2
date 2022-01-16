@@ -52,7 +52,7 @@ public class OperatorsAndLoopsHomework {
         String[] availableTransport = {"Bus", "Car", "Taxi", "Scooter"};
 
         for (int i = 0; i < availableTransport.length; i++) {
-            System.out.println("\t"+(i + 1) + ": " + availableTransport[i]);
+            System.out.println("\t" + (i + 1) + ": " + availableTransport[i]);
         }
         System.out.print("Choose transport by entering number: ");
         int choice = terminal.nextInt();
@@ -65,7 +65,7 @@ public class OperatorsAndLoopsHomework {
             default:
                 System.out.println("No such case");
         }
-        System.out.println("\n" + "");
+        System.out.println("\n");
 
         // 6. Increment numbers
         int numberForIncrement = 100;
