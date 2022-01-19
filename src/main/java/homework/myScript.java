@@ -12,7 +12,8 @@ public class myScript {
 
         Selenide.open("https://shop.acodemy.lv");
         $(By.linkText("My account")).click();
-        $(By.id("reg_username")).sendKeys(mock.name().firstName() + "xz");
+        $(By.id("reg_username")).sendKeys(mock.name().firstName() + "s");
+        $(By.id("reg_email")).sendKeys(mock.internet().emailAddress());
         System.out.println();
 
     }
