@@ -46,4 +46,6 @@ public class CalculatorTest {
     public void isScientificMethodTest(){
         assertFalse(casio.isScientific(), "incorrect");
     }
+
+
 }
