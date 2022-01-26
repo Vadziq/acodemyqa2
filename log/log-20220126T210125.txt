@@ -1,3 +1,0 @@
-21:01:25.678 [main] INFO  CalculatorTest - Testing add method
-21:01:25.685 [main] DEBUG CalculatorTest - Testing add method
-21:01:25.690 [main] ERROR CalculatorTest - test error
