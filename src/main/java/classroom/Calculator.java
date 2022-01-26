@@ -1,19 +1,23 @@
 package classroom;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+
+@AllArgsConstructor
 public class Calculator {
     //constructor
-
+    @Getter
     public String name;
+    @Getter
     public boolean isScientific;
 
+//    public Calculator(String name, boolean isScientific) {
+//        this.name = name;
+//        this.isScientific = isScientific;
+//    }
 
-    public Calculator(String name, boolean isScientific) {
-        this.name = name;
-        this.isScientific = isScientific;
-    }
-
-    public Calculator() {
-    }
+//    public Calculator() {
+//    }
 
 
     //default
@@ -22,10 +26,12 @@ public class Calculator {
     //protected
 
     public int add(int x, int y){
+
         return x + y;
     }
 
     public int sub(int x, int y){
+
         return x - y;
     }
 
@@ -37,19 +43,19 @@ public class Calculator {
         return x * y;
     }
 
-    public void printResult(int number){
-        System.out.println(number);
-    }
+    public int pow(int x){ return x * x;}
 
-    public void printCalculatorName(){
-        System.out.println(name);
-    }
+//    public void printResult(int number){
+//        System.out.println(number);
+//    }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//   public boolean isScientific() {return isScientific;}
+
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 }

@@ -1,6 +1,8 @@
 package homework;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class Animal {
 
     private String name;
@@ -29,6 +31,7 @@ public class Animal {
     }
 
     public void feed() {
+        //log.info("test log");
         System.out.print("feed > ");
         if(isSleeping){
             System.out.println("Can`t feed " + name + ", awake first");
