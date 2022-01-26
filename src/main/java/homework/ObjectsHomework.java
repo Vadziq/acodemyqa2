@@ -10,6 +10,7 @@ public class ObjectsHomework {
         Animal chicken = new Animal("Chicken",false, 4, 2);
         Animal sheep = new Animal("Sheep",false, 4, 4);
         Animal pig = new Animal("Pig",false, 4, 4);
+        Animal df = new Animal("fg");
 
         dog.status();
         dog.goSleep();
@@ -22,6 +23,8 @@ public class ObjectsHomework {
         dog.goTrain();
         dog.goTrain();
         dog.feed();
+        dog.feed();
+        dog.goSleep();
         dog.feed();
 
     }

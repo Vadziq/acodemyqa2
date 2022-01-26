@@ -30,7 +30,9 @@ public class Animal {
 
     public void feed() {
         System.out.print("feed > ");
-        if (healthPoints < 4) {
+        if(isSleeping){
+            System.out.println("Can`t feed " + name + ", awake first");
+        }else if (healthPoints < 4) {
             healthPoints = 4;
             System.out.println(name + " is well-fed, HP = " + healthPoints);
         } else System.out.println(name + " is not hungry");
@@ -66,7 +68,9 @@ public class Animal {
 
     private void checkHP(String actionPhrase) {
         System.out.print(actionPhrase + " > ");
-        if (healthPoints > 0) {
+        if(isSleeping){
+            System.out.println("Can`t feed " + name + ", awake first");
+        }else if (healthPoints > 0) {
             healthPoints--;
             System.out.println(name + " " + actionPhrase + "ing success " + healthPoints + " Health points left");
         } else
