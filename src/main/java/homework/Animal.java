@@ -8,23 +8,24 @@ public class Animal {
     private String name;
     private boolean isSleeping;
     private int healthPoints;
-
     private int quantityOfLegs; //added for example
 
     // constructors
     public Animal() {
+        log.info("Object created");
     }
 
     public Animal(String name) {
         this.name = name;
+        log.info("Object " + this.name + " created");
     }
 
     public Animal(String name, boolean isSleeping, int healthPoints, int quantityOfLegs) {
-        log.info("Object " + name + " created");
         this.name = name;
         this.isSleeping = isSleeping;
         this.healthPoints = healthPoints;
         this.quantityOfLegs = quantityOfLegs;
+        log.info("Object " + this.name + " created");
     }
 
     public void setName(String name) {
@@ -34,7 +35,7 @@ public class Animal {
 
     // actions
     public void status() {
-        System.out.printf("status >\n" +
+        System.out.printf("status >\n" + //warning: Concatenation can be replaced with text block
                 "\tAnimal\t\t:\t%s\n" +
                 "\tIs sleeping\t:\t%s\t\n" +
                 "\tHealth\t\t:\t%s\t\n" +
