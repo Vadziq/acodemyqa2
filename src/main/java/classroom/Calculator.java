@@ -45,9 +45,7 @@ public class Calculator {
 
     public int pow(int x){ return x * x;}
 
-//    public void printResult(int number){
-//        System.out.println(number);
-//    }
+
 
 //    public String getName() {
 //        return name;

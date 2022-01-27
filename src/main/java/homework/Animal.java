@@ -7,7 +7,7 @@ public class Animal {
 
     private String name;
     private boolean isSleeping;
-    private int healthPoints;
+    private int healthPoints = 4;
     private int quantityOfLegs; //added for example
 
     // constructors
@@ -47,8 +47,8 @@ public class Animal {
         if (isSleeping) {
             System.out.println("Can`t feed " + name + " is sleeping, awake first");
         } else if (healthPoints < 4) {
-            healthPoints = 4;
-            System.out.println(name + " is well-fed, HP = " + healthPoints);
+            healthPoints++;
+            System.out.println(name + " is fed, HP = " + this.healthPoints);
         } else System.out.println(name + " is not hungry");
     }
 
