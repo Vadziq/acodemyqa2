@@ -1,6 +1,9 @@
 import classroom.Calculator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -16,7 +19,11 @@ public class CalculatorTest {
         assertEquals(250, casio.add(200,50));
     }
 
-    @Test
+    @ParameterizedTest(name =  "This method will test method / {0}+{1}={2}")
+    @CsvSource({
+            "5, 10, 25",
+            "5, 20, 25"
+    } )
     public void subMethodTest(){
         log.error("test error");
         assertEquals(150, casio.sub(200,50));

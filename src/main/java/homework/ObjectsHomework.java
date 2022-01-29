@@ -30,5 +30,13 @@ public class ObjectsHomework {
         dog.feed();
         dog.sleep();
         dog.play();
+
+        ObjectsHomework objHome = new ObjectsHomework();
+        objHome.test("test");
     }
+
+     void test(String test){
+        System.out.println(test);
+    }
+
 }
