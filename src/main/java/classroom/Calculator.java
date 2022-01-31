@@ -16,8 +16,8 @@ public class Calculator {
 //        this.isScientific = isScientific;
 //    }
 
-//    public Calculator() {
-//    }
+    public Calculator() {
+    }
 
 
     //default
