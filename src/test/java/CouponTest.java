@@ -1,11 +1,9 @@
-import constants.Messages;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import page_object.CartPage;
@@ -52,6 +50,9 @@ public class CouponTest {
         driver.manage().window().maximize();
         System.out.println(driver.getTitle());
         chromeOptions.addArguments("--disable-logging");
+
+        System.out.println();
+
 
 
         log.info("Step 2: User select product by name " + HOODIE);
