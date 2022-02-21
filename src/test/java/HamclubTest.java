@@ -49,6 +49,8 @@ public class HamclubTest {
         log.info("Step 4 : List of units");
         crsPage.checkElements();
 
+        log.info("");
+
         // System.out.println(driver.findElement(By.xpath("/html/body/table[1]/tbody/tr/td[2]/font")));
         //driver.findElement(By.id("fancybox-close")).click();
 //        for (WebElement element:list) {

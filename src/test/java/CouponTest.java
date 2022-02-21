@@ -14,11 +14,12 @@ import utils.LocalDriverManager;
 import utils.PropertiesReader;
 
 
-
 import static constants.Colors.BLUE;
 import static constants.Messages.COUPON_IS_APPLIED;
 import static constants.Messages.COUPON_IS_REMOVED;
 import static constants.Products.HOODIE;
+import static constants.Coupons.EASY_DISCOUNT;
+import static constants.Coupons.UNEXISTED_COUPON;
 
 @Slf4j
 public class CouponTest {
@@ -28,32 +29,25 @@ public class CouponTest {
 
     ChromeOptions chromeOptions;
     HeaderPage header = new HeaderPage();
-    HomePage homePage= new HomePage();
+    HomePage homePage = new HomePage();
     ProductPage productPage = new ProductPage();
     CartPage cartPage = new CartPage();
 
 
     @BeforeEach
-    public void init(){
-//        driver = new ChromeDriver();
+    public void init() {
+
         chromeOptions = new ChromeOptions();
-//        this.header = new HeaderPage();
-//        this.home = new HomePage();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        log.info("Step1: User open webpage");
+        chromeOptions.addArguments("--disable-logging");
+
+        log.info("Step 1: User open webpage");
+        driver.manage().window().maximize();
         driver.get(PropertiesReader.getProperties().getProperty("home.page"));
+        System.out.println(driver.getTitle());
     }
 
     @Test
-    public void applyCouponCode(){
-
-        driver.manage().window().maximize();
-        System.out.println(driver.getTitle());
-        chromeOptions.addArguments("--disable-logging");
-
-        System.out.println();
-
-
+    public void applyCouponCode() {
 
         log.info("Step 2: User select product by name " + HOODIE);
         homePage.clickOnProduct(HOODIE);
@@ -71,20 +65,25 @@ public class CouponTest {
         productPage.viewCart();
 
         log.info("Step 7: User input coupon code");
-        cartPage.enterCoupon("easy_discount");
+        cartPage.enterCoupon(UNEXISTED_COUPON);
+//        cartPage.enterCoupon("easy_discount");
 
         log.info("Step 8: User apply coupon");
         cartPage.applyCoupon();
 
-        log.info("Step 9: Check if coupon is applied");
-        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
+//        log.info("Step 9: Check if coupon is applied");
+//        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
+
+        log.info("Step 9: Check if coupon is wrong");
+        cartPage.checkErrorMessage("Coupon \"" + UNEXISTED_COUPON + "\" does not exist!");
+
 
         log.info("Step 10: User remove coupon");
 //        cartPage.removeCoupon();
-        cartPage.removeCouponWithJs();
+//        cartPage.removeCouponWithJs();
 
         log.info("Step 11: Check if coupon is removed");
-        cartPage.checkRemovedMessage(COUPON_IS_REMOVED);
+//        cartPage.checkRemovedMessage(COUPON_IS_REMOVED);
         System.out.println();
 
 //        header.searchForAProduct("Album");
@@ -115,9 +114,6 @@ public class CouponTest {
 //        viewCartButton.click();
 
 
-
-
-
 //        List<WebElement> list = driver.findElements(By.xpath("//h2[@class='woocommerce-loop-product__title']"));
 //
 //        for (WebElement element:list) {
@@ -144,7 +140,7 @@ public class CouponTest {
     }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         LocalDriverManager.closeDriver();
     }
 }

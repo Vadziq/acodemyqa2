@@ -16,7 +16,8 @@ public class ProductPage {
 //    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     private final By colorSelection = By.id("pa_color");
     private final By logoSelection = By.id("logo");
-    private final By productCartButton = By.xpath("//button[contains(@class,'single_add_to_cart_button')]");
+//    private final By productCartButton = By.xpath("//button[contains(@class,'single_add_to_cart_button')]");
+    private final By productCartButton = By.xpath("//button[contains(@class,'button')]");
     private final By viewCartButton = By.xpath("//div[@class='woocommerce']//a[text()='View cart']");
 
 
@@ -43,7 +44,7 @@ public class ProductPage {
     }
 
     public void viewCart(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(viewCartButton));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(viewCartButton));
         wait.until(ExpectedConditions.elementToBeClickable(viewCartButton));
         driver.findElement(viewCartButton).click();
     }
