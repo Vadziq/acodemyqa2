@@ -44,6 +44,7 @@ public class CartPage {
 //        wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(couponCodeField))));
         System.out.println(code);
         wait.until(driver -> "complete".equals(((JavascriptExecutor) driver).executeScript("return document.readyState")));
+//        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//form[contains(@class,'processing')]"))));
 //        delay.seconds(Integer.parseInt(PropertiesReader.getProperties().getProperty("delay.wait")));
         driver.findElement(couponCodeField).sendKeys(code);
     }
