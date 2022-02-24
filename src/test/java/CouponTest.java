@@ -37,6 +37,7 @@ public class CouponTest {
 
     @BeforeEach
     public void init(){
+
 //        driver = new ChromeDriver();
         chromeOptions = new ChromeOptions();
 //        this.header = new HeaderPage();
