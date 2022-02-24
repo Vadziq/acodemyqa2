@@ -1,6 +1,7 @@
 package page_object;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -41,6 +42,11 @@ public class ProductPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(productCartButton));
         wait.until(ExpectedConditions.elementToBeClickable(productCartButton));
         driver.findElement(productCartButton).click();
+    }
+
+    public void addProductToCartWithJs(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", driver.findElement(productCartButton));
     }
 
     public void viewCart(){

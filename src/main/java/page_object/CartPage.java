@@ -11,6 +11,7 @@ import utils.Delay;
 import utils.LocalDriverManager;
 import utils.PropertiesReader;
 import java.time.Duration;
+import java.util.concurrent.TimeoutException;
 
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,10 +19,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class CartPage {
     private final WebDriver driver = LocalDriverManager.getInstance();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(PropertiesReader.getProperties().getProperty("implicit.wait"))));
-    private final Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver);
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(PropertiesReader.getProperties().getProperty("explicit.wait"))));
+//    private final Wait<WebDriver> fluentWait = new FluentWait<>(driver);
     private final Delay delay = new Delay();
-
 
 
 
@@ -41,24 +41,37 @@ public class CartPage {
 
 
     public void enterCoupon(String code){
-        delay.seconds(5);
+//        wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(couponCodeField))));
+        System.out.println(code);
+        wait.until(driver -> "complete".equals(((JavascriptExecutor) driver).executeScript("return document.readyState")));
+//        delay.seconds(Integer.parseInt(PropertiesReader.getProperties().getProperty("delay.wait")));
         driver.findElement(couponCodeField).sendKeys(code);
     }
 
     public void applyCoupon(){
-        driver.findElement(applyCouponButton).click();
+//        wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(applyCouponButton))));
+//        wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(applyCouponButton)));
+//        wait.until(ExpectedConditions.elementToBeClickable(applyCouponButton));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", driver.findElement(applyCouponButton));
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//form[contains(@class,'processing')]"))));
+//        driver.findElement(applyCouponButton).click();
     }
 
     public void checkSuccessMessage(String message){
         wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage));
         assertThat(driver.findElement(successMessage).getText(), equalTo(message));
-        System.out.println(driver.findElement(successMessage).getText());
+//        System.out.println(driver.findElement(successMessage).getText());
     }
 
     public void checkErrorMessage(String message){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+        System.out.println(message);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+        wait.until(ExpectedConditions.textToBe(errorMessage, message));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(PropertiesReader.getProperties().getProperty("imlicit.wait"))));
+//        delay.seconds(Integer.parseInt(PropertiesReader.getProperties().getProperty("delay.wait")));
         assertThat(driver.findElement(errorMessage).getText(), equalTo(message));
-        System.out.println(driver.findElement(errorMessage).getText());
+//        System.out.println(driver.findElement(errorMessage).getText());
     }
 
     public void removeCoupon(){

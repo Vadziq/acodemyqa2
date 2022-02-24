@@ -2,6 +2,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import page_object.CartPage;
@@ -12,8 +13,7 @@ import utils.LocalDriverManager;
 import utils.PropertiesReader;
 
 import static constants.Colors.BLUE;
-import static constants.Coupons.EASY_DISCOUNT;
-import static constants.Coupons.UNEXISTED_COUPON;
+import static constants.Coupons.*;
 import static constants.Messages.COUPON_IS_APPLIED;
 import static constants.Products.HOODIE;
 
@@ -21,7 +21,6 @@ import static constants.Products.HOODIE;
 public class CouponTest2 {
 
     private final WebDriver driver = LocalDriverManager.getInstance();
-
     ChromeOptions chromeOptions;
     HeaderPage header = new HeaderPage();
     HomePage homePage = new HomePage();
@@ -53,7 +52,8 @@ public class CouponTest2 {
         productPage.selectLogo(true);
 
         log.info("Step 5: User add product to cart");
-        productPage.addProductToCart();
+//        productPage.addProductToCart();
+        productPage.addProductToCartWithJs();
 
         log.info("Step 6: User open cart");
         productPage.viewCart();
@@ -62,23 +62,29 @@ public class CouponTest2 {
         cartPage.checkForCouponFieldAvailable("Coupon code");
 
         log.info("Step 8: User input incorrect coupon code: " + UNEXISTED_COUPON);
+        cartPage.checkForCouponFieldAvailable("Coupon code");
         cartPage.enterCoupon(UNEXISTED_COUPON);
 
         log.info("Step 9: User apply coupon");
         cartPage.applyCoupon();
 
-        log.info("Step 10: Check if coupon is wrong");
+        log.info("Step 10: Check if coupon does not exist");
         cartPage.checkErrorMessage("Coupon \"" + UNEXISTED_COUPON + "\" does not exist!"); //WTF?
 
-        log.info("Step 11: User input coupon code: " + EASY_DISCOUNT);
+//        log.info("Step 11: User input coupon code: " + EASY_DISCOUNT);
+//        cartPage.checkForCouponFieldAvailable("Coupon code");
+//        cartPage.enterCoupon(EASY_DISCOUNT);
+        log.info("Step 11: User input coupon code: " + EXPIRED);
         cartPage.checkForCouponFieldAvailable("Coupon code");
-        cartPage.enterCoupon(EASY_DISCOUNT);
+        cartPage.enterCoupon(EXPIRED);
 
         log.info("Step 12: User apply coupon");
         cartPage.applyCoupon();
 
-        log.info("Step 13: Check if coupon is applied");
-        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
+        log.info("Step 13: Check if coupon is expired");
+        cartPage.checkErrorMessage("This coupon has expired.");
+//        log.info("Step 13: Check if coupon is applied");
+//        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
 
 
         System.out.println();
@@ -87,6 +93,7 @@ public class CouponTest2 {
 
     @AfterEach
     public void tearDown() {
+
         LocalDriverManager.closeDriver();
     }
 }
