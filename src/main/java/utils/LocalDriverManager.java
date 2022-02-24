@@ -3,14 +3,15 @@ package utils;
 import exceptions.UnsupportedDriverException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import java.net.URI;
 
+@Slf4j
 public class LocalDriverManager {
 
     private static WebDriver driver;
@@ -44,7 +45,9 @@ public class LocalDriverManager {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
 
-        return new RemoteWebDriver(URI.create("http://165.22.17.220:4444/wd/hub").toURL(), capabilities);
+        RemoteWebDriver remote = new RemoteWebDriver(URI.create("http://165.22.17.220:4444/wd/hub").toURL(), capabilities);
+        log.info("Session ID: " + remote.getSessionId().toString());
+        return remote;
     }
 
     public static WebDriver configureDriver(){
