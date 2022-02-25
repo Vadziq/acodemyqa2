@@ -44,6 +44,8 @@ public class CouponTest {
 //        this.home = new HomePage();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         log.info("Step1: User open webpage");
+        chromeOptions.addArguments("--disable-logging");
+        chromeOptions.addArguments("--headless");
         driver.get(PropertiesReader.getProperties().getProperty("home.page"));
     }
 
@@ -52,7 +54,8 @@ public class CouponTest {
 
         driver.manage().window().maximize();
         System.out.println(driver.getTitle());
-        chromeOptions.addArguments("--disable-logging");
+
+
 
 
         log.info("Step 2: User select product by name " + HOODIE);
