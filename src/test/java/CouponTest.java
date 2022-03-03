@@ -54,10 +54,7 @@ public class CouponTest {
 
         driver.manage().window().maximize();
         System.out.println(driver.getTitle());
-
-
-
-
+        //test
 
         log.info("Step 2: User select product by name " + HOODIE);
         homePage.clickOnProduct(HOODIE);
