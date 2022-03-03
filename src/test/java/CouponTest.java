@@ -58,6 +58,7 @@ public class CouponTest {
 
 
 
+
         log.info("Step 2: User select product by name " + HOODIE);
         homePage.clickOnProduct(HOODIE);
 
