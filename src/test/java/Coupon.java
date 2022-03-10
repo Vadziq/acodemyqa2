@@ -1,9 +1,7 @@
-import constants.Messages;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,7 +21,7 @@ import static constants.Messages.COUPON_IS_REMOVED;
 import static constants.Products.HOODIE;
 
 @Slf4j
-public class CouponTest {
+public class Coupon {
 
 
     private final WebDriver driver = LocalDriverManager.getInstance();
